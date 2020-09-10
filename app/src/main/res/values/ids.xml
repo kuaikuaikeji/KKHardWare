@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="rv_list" type="id"/>
+    <item name="btn_ok" type="id"/>
+    <item name="btn_cancel" type="id"/>
+</resources>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="用户基本信息"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:columnCount="2"
+            app:rowCount="8"
+            app:useDefaultMargins="true">
+
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="end|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="姓名"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_columnSpan="1"
+                app:layout_columnWeight="1"
+                app:layout_rowSpan="1"
+                app:layout_rowWeight="1" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="请输入"
+                android:inputType="text"
+                android:maxLength="8"
+                android:textSize="16sp"
+                app:layout_columnWeight="2"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="end|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="身高"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_columnSpan="1"
+                app:layout_columnWeight="1"
+                app:layout_rowSpan="1"
+                app:layout_rowWeight="1" />
+
+            <EditText
+                android:id="@+id/et_height"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="请输入身高（cm）"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textSize="16sp"
+                app:layout_columnWeight="2"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="end|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="体重"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_columnSpan="1"
+                app:layout_columnWeight="1"
+                app:layout_rowSpan="1"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:id="@+id/tv_weight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="请连接体脂称测量"
+                android:textSize="16sp"
+                app:layout_columnWeight="2"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="end|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="用户年龄"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_columnSpan="1"
+                app:layout_columnWeight="1"
+                app:layout_rowSpan="1"
+                app:layout_rowWeight="1" />
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="请输入"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="16sp"
+                app:layout_columnWeight="2"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="end|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="用户性别"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_columnSpan="1"
+                app:layout_columnWeight="1"
+                app:layout_rowSpan="1"
+                app:layout_rowWeight="1" />
+
+            <RadioGroup
+                android:id="@+id/rg_sex"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1">
+
+                <RadioButton
+                    android:id="@+id/rb_sexMan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:padding="10dp"
+                    android:text="男" />
+
+                <RadioButton
+                    android:id="@+id/rb_sexWoman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:padding="10dp"
+                    android:text="女" />
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="end|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="静态心率"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_columnSpan="1"
+                app:layout_columnWeight="1"
+                app:layout_rowSpan="1"
+                app:layout_rowWeight="1" />
+
+            <EditText
+                android:id="@+id/et_staticHeart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="请输入"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textSize="16sp"
+                app:layout_columnWeight="2"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="end|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="上次绑定"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_columnSpan="1"
+                app:layout_columnWeight="1"
+                app:layout_rowSpan="1"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:id="@+id/tv_lastBindTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="请绑定臂带"
+                android:textSize="16sp"
+                app:layout_columnWeight="2"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:gravity="end|center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="运动消耗"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_columnSpan="1"
+                app:layout_columnWeight="1"
+                app:layout_rowSpan="1"
+                app:layout_rowWeight="1" />
+
+            <TextView
+                android:id="@+id/tv_sumCalorie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:hint="请输入身高（cm）"
+                android:textSize="16sp"
+                app:layout_columnWeight="2"
+                app:layout_rowWeight="1" />
+        </androidx.gridlayout.widget.GridLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/ButtonPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_border"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:text="取消"
+            android:textColor="@color/selector_color_primary" />
+
+        <Button
+            android:id="@+id/btn_ok"
+            style="@style/ButtonPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="60dp"
+            android:paddingEnd="60dp"
+            android:text="确认" />
+    </LinearLayout>
+</LinearLayout>

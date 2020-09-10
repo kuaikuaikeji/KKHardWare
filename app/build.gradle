@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    signingConfigs {
+        config {
+            storeFile file('KKTest.jks')
+            storePassword 'kktest'
+            keyAlias 'kktest'
+            keyPassword 'kktest'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.kk.hardware.demo"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 10000
+        versionName "1.0.0"
+        multiDexEnabled true // 65535
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        debug {
+//            minifyEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    configurations.all {//强制刷新使用最新的 snapshot
+        resolutionStrategy.cacheChangingModulesFor 1, 'minutes'
+    }
+    packagingOptions {
+        exclude 'META-INF/*.kotlin_module'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // 修改打包文件名字
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def time = new Date().format("yyyyMMdd_HHmmss")
+            def fileName = "SDKDemo_${defaultConfig.versionName}_${defaultConfig.versionCode}_${time}_"
+            fileName += variant.buildType.name + ".apk"
+            outputFileName = fileName
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    ext.anko_version = '0.10.8'
+    implementation "org.jetbrains.anko:anko-recyclerview-v7:$anko_version"
+//    implementation "com.alibaba:fastjson:1.1.71.android"
+    // RecyclerView 适配器相关
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.1'
+    implementation "com.squareup.okhttp3:okhttp:4.7.2"
+
+    // 硬件 OTA
+    implementation 'com.kuaikuai.hardware:ble:1.0.0-SNAPSHOT'
+    implementation 'com.kuaikuai:core:1.0.0-SNAPSHOT'
+}
