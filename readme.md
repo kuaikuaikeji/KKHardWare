@@ -27,7 +27,7 @@
 
 >
 * 蓝牙使用需动态申请位置权限，且需开启位置服务
-* 蓝牙实现类：[`KKBleCentralImpl`](http://)
+* 蓝牙实现类：[`KKBleCentralImpl`](/KKBleCentralImpl.kt)
 * 具体使用请参照 `demo`
 
 >
@@ -102,7 +102,7 @@ interface KKHealthScalePeripheral {
 }
 
 ```
-* 测量回调接口：[`IResultListener`](http://)
+* 测量回调接口：[`IResultListener`](IResultListener.kt)
 
 #### 家用臂带
 >
@@ -120,9 +120,9 @@ interface KKArmletPeripheral {
     fun sendCommand(command: AbstractModelToBytes, listener: IWriteListener)
 }
 ```
-* 发送指令内容：[`ArmletCommand`](http://)
-* 指令接收回调接口：[`IResultListener`](http://)
-* 读取电量回调接口：[`IReadElectricQuantityListener`](http://)
+* 发送指令内容：[`ArmletCommand`](ArmletCommand.kt)
+* 指令接收回调接口：[`IResultListener`](IResultListener.kt)
+* 读取电量回调接口：[`IReadElectricQuantityListener`](IReadElectricQuantityListener.kt)
 
 ##### 固件升级
 具体使用方法请查看 demo ota 升级部分内容
