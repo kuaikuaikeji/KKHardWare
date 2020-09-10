@@ -102,7 +102,7 @@ interface KKHealthScalePeripheral {
 }
 
 ```
-* 测量回调接口：[`IResultListener`](doc/IResultListener.kt)
+* 测量回调接口：[`IResultListener`](doc/KKHealthScalePeripheral.kt)
 
 #### 家用臂带
 >
