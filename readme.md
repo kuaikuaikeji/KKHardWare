@@ -15,7 +15,7 @@
 2. 需要应用的模块 `build.gradle` 添加引用
 ```
     dependencies {
-        implementation 'com.kuaikuai.hardware:ble:1.0.0-SNAPSHOT'
+        implementation 'com.kuaikuai.hardware:ble:1.0.1-SNAPSHOT'
     }
 ```
 
