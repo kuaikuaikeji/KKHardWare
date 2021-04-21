@@ -65,6 +65,8 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:4.7.2"
 
     // 硬件 OTA
-    implementation 'com.kuaikuai.hardware:ble:1.0.0-SNAPSHOT'
+    // implementation 'no.nordicsemi.android:dfu:1.8.1' // support
+    implementation 'no.nordicsemi.android:dfu:1.10.4' // androidx
+    implementation 'com.kuaikuai.hardware:ble:1.0.2-SNAPSHOT'
     implementation 'com.kuaikuai:core:1.0.0-SNAPSHOT'
 }
