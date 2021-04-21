@@ -15,7 +15,9 @@
 2. 需要应用的模块 `build.gradle` 添加引用
 ```
     dependencies {
-        implementation 'com.kuaikuai.hardware:ble:1.0.0-SNAPSHOT'
+        implementation 'com.kuaikuai.hardware:ble:1.0.2-SNAPSHOT'
+//      implementation 'no.nordicsemi.android:dfu:1.8.1' // support
+//      implementation 'no.nordicsemi.android:dfu:1.10.4' // androidx
     }
 ```
 
